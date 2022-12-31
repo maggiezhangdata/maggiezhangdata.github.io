@@ -18,45 +18,45 @@ Module 0: Introduction & Preparation
 	* Wed 1.18 (in-person lecture): Orientation & Logistics 
 * Week 2: 
 	* Mon 1.23 (in-person lecture): Introduction to web data collection 
-	* Wed 1.25 (Lab 0): Installation and basic Intro to R & Python programming
+	* Wed 1.25 (lab 0): Installation and basic Intro to R & Python programming
 
 Module 1: Data Collection
 --------
 * Week 3:
 	* Mon 1.30 (in-person lecture): Data collection using API
-	* Wed 2.1 (Lab 1)
+	* Wed 2.1 (lab 1)
 * Week 4:
 	* Mon 2.6 (in-person lecture): Data collecting through web scraping
-	* Web 2.8 (Lab 2)
+	* Web 2.8 (lab 2)
 * Week 5:
 	* Mon 2.13 (in-person lecture): Advanced data collection 
-	* Web 2.15 (Lab 3)
+	* Web 2.15 (lab 3)
 * Week 6:
 	* Mon 2.20 (in-person lecture): Data wrangling
-	* Web 2.22 (No class: Assignment consultation session in lab)
+	* Web 2.22 (no class: Assignment consultation session in lab)
 
 Module 2: Data Analysis
 --------
 * Week 7: 
 	* Mon 2.27 (in-person lecture): Text mining (1)
-	* Web 3.1 (Lab 4)
+	* Web 3.1 (lab 4)
 * Week 8:
 	* Mon 3.6 (in-person lecture): Text mining (2)
-	* Web 3.8 (Lab 5)
+	* Web 3.8 (lab 5)
 * Week 9: Spring break 
 * Week 10:
 	* Mon 3.20 (in-person lecture): Network analysis (1)
-	* Web 3.22 (Lab 6)
+	* Web 3.22 (lab 6)
 * Week 11:
 	* Mon 3.27 (in-person lecture): Network analysis (2)
-	* Web 3.29 (Lab 7)
+	* Web 3.29 (lab 7)
 
 Module 3: Data Storytelling
 --------
 * Week 12: No class - Proposal feedback on Zoom
 * Week 13:
 	* Mon 4.10 (in-person lecture): Data visualization 
-	* Web 4.12 (Lab 8)
+	* Web 4.12 (lab 8)
 * Week 14: 
 	* Mon 4.17 (in-person lecture): Brand & Consumer Insight
 	* Web 4.19 (in-person lecture): Connecting the dots
