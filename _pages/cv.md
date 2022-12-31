@@ -7,7 +7,9 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+Please download my CV [here](https://maggiezhangdata.github.io/files/MZ_academic_CV.pdf). 
+
+{% files/MZ_academic_CV.pdf %}
 
 Education
 ======
