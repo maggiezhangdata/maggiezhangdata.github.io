@@ -10,11 +10,21 @@ location: "Champaign, IL, US"
 
 The art and science of extracting valuable hidden insights from vast amounts of semi-structured and unstructured social media data to enable informed and insightful decision making.
 
-Heading 1
-======
+Please find [syllabus](https://docs.google.com/document/d/1MgLldJJeVO-ILw-jHBWqG_DW3D8GQZ1nyCiHRsK1ygA/edit?usp=sharing) here. 
 
-Heading 2
-======
+Module 0: Introduction & Preparation 
+--------
+* Week 1: Orientation & Logistics 
+	* Wed 1.18 (in-person lecture): Orientation & Logistics 
+* Week 2: 
+	* Mon 1.23 (in-person lecture): Introduction to web data collection 
+	* Wed 1.25 (Lab 0): Installation and basic Intro to R & Python programming
 
-Heading 3
-======
+Module 1: Data Collection
+--------
+* Week 3:
+	* Mon 1.30
+
+
+
+	
