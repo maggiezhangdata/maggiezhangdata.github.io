@@ -11,7 +11,6 @@ citation: 'Wang, X., & Zhang, M. M. (2022). Sharing the same bed with different 
 
 [Download paper here](http://maggiezhangdata.github.io/files/2022_JoMC_WangZhang2022Topicmodelingtheresearch-practicegapinPR.pdf)
 
-Recommended citation: Wang, X., & Zhang, M. M. (2022). Sharing the same bed with different dreams: Topic modeling the research-practice gap in public relations 2011-2020. Journal of Marketing Communications, 1-25.
 
 Abstract
 ---------

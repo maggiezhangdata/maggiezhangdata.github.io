@@ -8,8 +8,8 @@ venue: 'Social Science Computer Review'
 # paperurl: 'http://maggiezhangdata.github.io/files/2021_SSCR_STM_China_Propaganda_HK.pdf'
 citation: 'Zhang, M. M., Wang, X., & Hu, Y. (2021). Strategic Framing Matters But Varies: A Structural Topic Modeling Approach to Analyzing China’s Foreign Propaganda About the 2019 Hong Kong Protests on Twitter. Social Science Computer Review, 08944393211042575.'
 ---
+[Download paper here](http://maggiezhangdata.github.io/files/2021_SSCR_STM_China_Propaganda_HK.pdf)
 
-Recommended citation: Zhang, M. M., Wang, X., & Hu, Y. (2021). Strategic Framing Matters But Varies: A Structural Topic Modeling Approach to Analyzing China’s Foreign Propaganda About the 2019 Hong Kong Protests on Twitter. Social Science Computer Review, 08944393211042575.
 
 Abstract 
 ---------
@@ -19,7 +19,6 @@ Keywords
 ---------
 engagement, foreign propaganda, Hong Kong protests, state media, strategic framing, structural topic modeling, Twitter
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
 
 
 
