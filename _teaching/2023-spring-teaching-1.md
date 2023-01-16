@@ -15,7 +15,7 @@ Please find [syllabus](https://docs.google.com/document/d/1MgLldJJeVO-ILw-jHBWqG
 Module 0: Introduction & Preparation 
 --------
 * Week 1:  
-	* Wed 1.18 (in-person lecture): Orientation & Logistics 
+	* Wed 1.18 (in-person lecture): [Orientation & Logistics](https://docs.google.com/presentation/d/15b69b--si3OJIkc4vy9Nbmx049rOrzf6JL6WaMX3O5g/edit?usp=sharing) 
 * Week 2: 
 	* Mon 1.23 (in-person lecture): Introduction to web data collection 
 	* Wed 1.25 (lab 0): Installation and basic Intro to R & Python programming
