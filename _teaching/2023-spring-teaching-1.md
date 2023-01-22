@@ -2,7 +2,7 @@
 title: "ADV 480: Social Media Analytics"
 collection: teaching
 type: "Graduate & undergraduate course"
-permalink: /teaching/ADV480
+permalink: /teaching/2023-spring-teaching-1
 venue: "University of Illinois Urbana Champaign, Department of Advertising"
 date: 2023-01-15
 location: "Champaign, IL, US"
