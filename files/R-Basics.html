@@ -1636,10 +1636,10 @@ working. When you ask R to open a file, it will look in the working
 directory for this file, and when you tell R to save a data file or
 figure, it will save it in the working directory.</p>
 <pre class="r"><code># setwd(&quot;/R Review&quot;) # set a working directory</code></pre>
-<p>I will recommend using the Project option when opening RStudio. You
-can either create a new project or connect a project with a pre-existing
-folder. Then you will be working in the project under the specified
-folder.</p>
+<p>I will recommend using the <strong>Project</strong> option when
+opening RStudio. You can either <strong>create a new project</strong> or
+c<strong>onnect a project with a pre-existing folder</strong>. Then you
+will be working in the project under the specified folder.</p>
 <p>R can do many statistical and data analyses. They are organized in
 so-called packages or libraries. With the standard installation, most
 common packages are installed.</p>
@@ -1662,20 +1662,21 @@ RHS</p>
 <pre class="r"><code>&quot;apple&quot; %&gt;% print()</code></pre>
 <pre><code>## [1] &quot;apple&quot;</code></pre>
 </div>
-<div id="section-i-programming-basics" class="section level1">
-<h1>Section I: Programming Basics</h1>
-<div id="io" class="section level2">
-<h2>1.1. I/O</h2>
+<div id="basic-intro" class="section level1">
+<h1>1. Basic Intro</h1>
+<div id="inputoutput" class="section level2">
+<h2>1.1. Input/Output</h2>
 <p>How to import data from text, csv files into R?</p>
 <pre class="r"><code>#data = read.csv(file=&quot;https://drmaggiezhang.com/files/inclass_data.csv&quot;,stringsAsFactors=F)
 #write.csv(data,file=&quot;new_data.csv&quot;)</code></pre>
-<p>If encountering new file types, Google it. The logic is the same.</p>
+<p>If encountering new file types, Google it. The basic idea is the
+same.</p>
 <div id="rdata" class="section level3">
 <h3>1.1.0 RData</h3>
 <p>Unique to R: save &amp; load .RData files.</p>
 <ol style="list-style-type: decimal">
-<li>using the Environment in RStudio</li>
-<li>using code</li>
+<li>using the <strong>Environment</strong> in RStudio</li>
+<li>using the following code</li>
 </ol>
 <pre class="r"><code># save(data,x,file=&quot;test.RData&quot;) # we can save multiple objects in one .RData file 
 # load(&quot;test.RData&quot;)
@@ -1717,8 +1718,9 @@ function and check the examples. For example</p>
 <pre class="r"><code>help(sum) # or equivalently
 ?sum</code></pre>
 </div>
-<div id="data-types" class="section level2">
-<h2>1.3. Data types</h2>
+</div>
+<div id="data-types" class="section level1">
+<h1>2. Data types</h1>
 <p>There are 3 general modes of data in R: string/characters, numbers,
 and logical.</p>
 <pre class="r"><code>string = &quot;I am xxx&quot;
@@ -1740,16 +1742,33 @@ logic</code></pre>
 <pre class="r"><code>missing = NA
 missing</code></pre>
 <pre><code>## [1] NA</code></pre>
+<p>We can also change the data type manually.</p>
+<pre class="r"><code>t = &#39;2&#39;
+typeof(t) # character</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<pre class="r"><code>t1 = as.numeric(t)
+typeof(t1) # number</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
+<pre class="r"><code>t2 = as.character(t1)
+typeof(t2) # character again</code></pre>
+<pre><code>## [1] &quot;character&quot;</code></pre>
 </div>
-<div id="data-structures" class="section level2">
-<h2>1.4. Data structures</h2>
+<div id="data-structures" class="section level1">
+<h1>3. Data structures</h1>
 <p>To learn any programming languages, a shortcut is to learn the core
 elements. Fortunately, most programming languages share very similar
 core elements. They are data structure, conditional expressions, loops,
 and functions.</p>
-<p>Four types of data structure are commonly used in R: vector, matrix,
-data frame, and list. The first is vector. Vector is a list of values.
-These values could be numeric, logic, or string.</p>
+<p>Four types of data structure are commonly used in R:
+<strong>vector</strong>, matrix, <strong>data frame</strong>, and list.
+The first is vector. Vector is a list of values. These values could be
+numeric, logic, or string.</p>
+<p>We will focus more on the vector and data frame since they are more
+commonly used in social media analytics.</p>
+<div id="vector" class="section level2">
+<h2>3.1 Vector</h2>
+<div id="creating-a-vector" class="section level3">
+<h3>3.1.1 Creating a vector</h3>
 <pre class="r"><code># using c (c is a function) to generate a new vector
 v = c(1,7,9,10) 
 v</code></pre>
@@ -1760,9 +1779,48 @@ happen?</p>
 <pre class="r"><code>v2 = c(1,7,NA,&quot;hi&quot;)
 v2</code></pre>
 <pre><code>## [1] &quot;1&quot;  &quot;7&quot;  NA   &quot;hi&quot;</code></pre>
-<pre class="r"><code># to access an element in the vector
-v[-2]</code></pre>
+<p>R will force every element in the vector to be a string/character
+type in the case.</p>
+</div>
+<div id="accessing-elements-in-the-vector" class="section level3">
+<h3>3.1.2 Accessing elements in the vector</h3>
+<p>R uses a 1-index system, meaning the 1st index refers to the 1st
+element, which is different from Python. We can access the n-th element
+in a vector by:</p>
+<pre class="r"><code>v[2]</code></pre>
+<pre><code>## [1] 7</code></pre>
+<p>We can also know the total number of elements in a vector by using
+length().</p>
+<pre class="r"><code>length(v)</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p>However, unlike Python, reverse indexing is not that convenient in R.
+To access the last element in a vector, you can use the following
+code.</p>
+<pre class="r"><code>v[length(v)]</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p>There is another specific function to reverse a vector.</p>
+<pre class="r"><code>rev(v)</code></pre>
+<pre><code>## [1] 10  9  7  1</code></pre>
+<p>Therefore you can also use the following code to access the last
+element in R:</p>
+<pre class="r"><code>rev(v)[1]</code></pre>
+<pre><code>## [1] 10</code></pre>
+<p>The length() function is to count the number of items instead of
+character length. To know the character length, we have the nchar()
+function.</p>
+<pre class="r"><code>nchar(&quot;apple&quot;)</code></pre>
+<pre><code>## [1] 5</code></pre>
+<p>We can also access multiple elements of a vector at the same
+time.</p>
+<pre class="r"><code>v[c(1,3)] # accessing the 1st and 3rd element in v</code></pre>
+<pre><code>## [1] 1 9</code></pre>
+<pre class="r"><code>v[c(1:3)] # accessing the first three elements in v</code></pre>
+<pre><code>## [1] 1 7 9</code></pre>
+<p>Note we can also access the rest vector by excluding certain
+items.</p>
+<pre class="r"><code>v[-2] # excluding the 2nd item </code></pre>
 <pre><code>## [1]  1  9 10</code></pre>
+<p>We can also give names to vector elements</p>
 <pre class="r"><code># vector elements can have names
 names(v)</code></pre>
 <pre><code>## NULL</code></pre>
@@ -1779,6 +1837,37 @@ the vector.</p>
 <pre class="r"><code>sqrt(v)</code></pre>
 <pre><code>##    First   Second    Third   Fourth 
 ## 1.000000 2.645751 3.000000 3.162278</code></pre>
+<p>We can also use min, max, mean to summarize the vector</p>
+<pre class="r"><code>min(v)</code></pre>
+<pre><code>## [1] 1</code></pre>
+<pre class="r"><code>max(v)</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>mean(v)</code></pre>
+<pre><code>## [1] 6.75</code></pre>
+<pre class="r"><code>sum(v)</code></pre>
+<pre><code>## [1] 27</code></pre>
+<p>We can use the table() function to get the frequency table of items
+in a vector.</p>
+<pre class="r"><code>table(v)</code></pre>
+<pre><code>## v
+##  1  7  9 10 
+##  1  1  1  1</code></pre>
+</div>
+</div>
+<div id="list-manipulation" class="section level2">
+<h2>3.1.3 List manipulation</h2>
+<p>Adding elements into an existing vector is simple.</p>
+<pre class="r"><code>v1 = c(1,2,3)
+c(v1,4) # adding 4 into v1</code></pre>
+<pre><code>## [1] 1 2 3 4</code></pre>
+<p>We can also add a new vector to an existing vector using the same
+method.</p>
+<pre class="r"><code>v2 = c(10,20)
+c(v1,v2) # appedning v2 to v1</code></pre>
+<pre><code>## [1]  1  2  3 10 20</code></pre>
+</div>
+<div id="matrix" class="section level2">
+<h2>3.2 Matrix</h2>
 <p>The second structure is matrix. Matrix is a collection of vectors,
 organized in rows and columns. Values in a matrix should be in the same
 data type. Each column or row is a vector. We use the matrix function to
@@ -1829,12 +1918,58 @@ generate a matrix with 5 cols and 5 rows. Values are integers from 1 to
 ## [10,]    5   10   15   20   25</code></pre>
 <pre class="r"><code># access a matrix element
 m[2,3] = &quot;hi&quot;</code></pre>
+</div>
+<div id="data-frame" class="section level2">
+<h2>3.3 Data frame</h2>
 <p>A data frame is a matrix, while columns could be of all different
 data types.</p>
+<div id="creating-a-data-frame" class="section level3">
+<h3>3.3.1 Creating a data frame</h3>
+<p>From vectors:</p>
 <pre class="r"><code>v1=c(1,7,6,3,2)
 v2=c(T,F,T,F,T)
 v3=c(&quot;Y&quot;,&quot;N&quot;,&quot;Y&quot;,&quot;N&quot;,&quot;Y&quot;)
 d = data.frame(v1,v2,v3,stringsAsFactors=F) # create use data.frame</code></pre>
+<p>From csv files:</p>
+<pre class="r"><code>df = df = read.csv(&quot;https://drmaggiezhang.com/files/inclass_data.csv&quot;,stringsAsFactors = F)</code></pre>
+<p>The stringAsFactors = F argument is to make sure the text content is
+treated as string instead of factors.</p>
+</div>
+<div id="accessing-columns-and-rows-in-a-data-frame" class="section level3">
+<h3>3.3.2 Accessing columns and rows in a data frame</h3>
+<p>Columns in a data frame can be access using a $ sign.</p>
+<pre class="r"><code>d$v1</code></pre>
+<pre><code>## [1] 1 7 6 3 2</code></pre>
+<p>We can also select rows that satisfy certain conditions. For example,
+accessing rows with v2 == T</p>
+<pre class="r"><code>d[d$v2 == T,]</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["v1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["v2"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["v3"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"TRUE","3":"Y","_rn_":"1"},{"1":"6","2":"TRUE","3":"Y","_rn_":"3"},{"1":"2","2":"TRUE","3":"Y","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Combing row selection &amp; vector summarization, we can select the
+row with the biggest v1 value:</p>
+<pre class="r"><code>d[d$v1 == max(d$v1),]</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["v1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["v2"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["v3"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"7","2":"FALSE","3":"N","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>We can also select certain columns as well.</p>
+<pre class="r"><code>d[d$v1 == max(d$v1),c(&#39;v1&#39;,&#39;v3&#39;)]</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["v1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["v3"],"name":[2],"type":["chr"],"align":["left"]}],"data":[{"1":"7","2":"N","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Adding a new column to a data frame is also straightforward.</p>
+<pre class="r"><code>d$new_v = &quot;new&quot;
+d$new_v2 = c(1,2,3,4,5)</code></pre>
+</div>
+</div>
+<div id="list" class="section level2">
+<h2>3.4 List</h2>
 <p>A list is a collection of all data structure.</p>
 <pre class="r"><code>l = list(v,m,d)
 names(l)</code></pre>
@@ -1842,15 +1977,18 @@ names(l)</code></pre>
 <pre class="r"><code>l[[3]]</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["v1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["v2"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["v3"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"TRUE","3":"Y"},{"1":"7","2":"FALSE","3":"N"},{"1":"6","2":"TRUE","3":"Y"},{"1":"3","2":"FALSE","3":"N"},{"1":"2","2":"TRUE","3":"Y"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["v1"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["v2"],"name":[2],"type":["lgl"],"align":["right"]},{"label":["v3"],"name":[3],"type":["chr"],"align":["left"]},{"label":["new_v"],"name":[4],"type":["chr"],"align":["left"]},{"label":["new_v2"],"name":[5],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"TRUE","3":"Y","4":"new","5":"1"},{"1":"7","2":"FALSE","3":"N","4":"new","5":"2"},{"1":"6","2":"TRUE","3":"Y","4":"new","5":"3"},{"1":"3","2":"FALSE","3":"N","4":"new","5":"4"},{"1":"2","2":"TRUE","3":"Y","4":"new","5":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
-<div id="programming-tools" class="section level2">
-<h2>1.5. Programming tools</h2>
+</div>
+<div id="programming-tools" class="section level1">
+<h1>4. Programming tools</h1>
 <p>I will introduce 3 programming tools: if…else expression (which is
 one of the conditional expressions), for and while loop expressions, and
 user defined functions.</p>
+<div id="if-else" class="section level2">
+<h2>4.1 if … else …</h2>
 <p>Task: input a number, if the value is larger than or equal to 100,
 print “High Value”, if the value is less than 100 and larger than or
 equal to 50, print “Middle Value”, if less than 50, print “Low
@@ -1864,27 +2002,30 @@ if (x&gt;=100){
   print(&quot;Low Value&quot;)
 }</code></pre>
 <pre><code>## [1] &quot;Middle Value&quot;</code></pre>
+</div>
+<div id="iteration" class="section level2">
+<h2>4.2 Iteration</h2>
 <p>Task: calculate the number of characters in our names. We use nchar()
 for each name.That means we will use the nchar() function many
 times.</p>
-<pre class="r"><code>names=c(&quot;Hai&quot;,&quot;Jonanthan&quot;,&quot;Zhenzhen&quot;,&quot;Qinjie&quot;)
+<pre class="r"><code>names=c(&quot;Maggie&quot;,&quot;Abby&quot;,&quot;Jack&quot;,&quot;Mike&quot;)
 for (name in names) {
   N = nchar(name)
   print (paste(name,&quot;:&quot;,N,&quot;characters&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Hai : 3 characters&quot;
-## [1] &quot;Jonanthan : 9 characters&quot;
-## [1] &quot;Zhenzhen : 8 characters&quot;
-## [1] &quot;Qinjie : 6 characters&quot;</code></pre>
+<pre><code>## [1] &quot;Maggie : 6 characters&quot;
+## [1] &quot;Abby : 4 characters&quot;
+## [1] &quot;Jack : 4 characters&quot;
+## [1] &quot;Mike : 4 characters&quot;</code></pre>
 <p>or alternatively, loop over the index of the vector:</p>
 <pre class="r"><code>for (i in 1:4) {
   N = nchar(names[i])
   print (paste(names[i],&quot;:&quot;,N,&quot;characters&quot;))
 }</code></pre>
-<pre><code>## [1] &quot;Hai : 3 characters&quot;
-## [1] &quot;Jonanthan : 9 characters&quot;
-## [1] &quot;Zhenzhen : 8 characters&quot;
-## [1] &quot;Qinjie : 6 characters&quot;</code></pre>
+<pre><code>## [1] &quot;Maggie : 6 characters&quot;
+## [1] &quot;Abby : 4 characters&quot;
+## [1] &quot;Jack : 4 characters&quot;
+## [1] &quot;Mike : 4 characters&quot;</code></pre>
 <p>or use while instead of loop</p>
 <pre class="r"><code>i=1
 while (i&lt;=4){
@@ -1892,10 +2033,13 @@ while (i&lt;=4){
   print (paste(names[i],&quot;:&quot;,N,&quot;characters&quot;))
   i=i+1 #counter
 }</code></pre>
-<pre><code>## [1] &quot;Hai : 3 characters&quot;
-## [1] &quot;Jonanthan : 9 characters&quot;
-## [1] &quot;Zhenzhen : 8 characters&quot;
-## [1] &quot;Qinjie : 6 characters&quot;</code></pre>
+<pre><code>## [1] &quot;Maggie : 6 characters&quot;
+## [1] &quot;Abby : 4 characters&quot;
+## [1] &quot;Jack : 4 characters&quot;
+## [1] &quot;Mike : 4 characters&quot;</code></pre>
+</div>
+<div id="functions" class="section level2">
+<h2>4.3 Functions</h2>
 <p>You can write your own functions and use them in the same way as the
 generic functions. For example, you can write a function to calculate
 the area of a square. The formula is area = width*height.</p>
