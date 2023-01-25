@@ -361,49 +361,54 @@ display: none;
 <pre class="r"><code>L = c(3, 1, 1.3, 2, &#39;2&#39;, c(2,8), TRUE, FALSE, FALSE, TRUE, 2, 3, 3, 9,2, &quot;banana&quot;, &quot;tree&quot;, &#39;bee&#39;, &#39;this is a long string&#39;)</code></pre>
 <div id="q1." class="section level3">
 <h3>Q1.</h3>
-<p>Write the code to show the data type of the 6th element in the vector
-L (Note: R uses the 1-based index).</p>
+<p>Write the code to show the <strong>data type</strong> of the
+<strong>6th element</strong> in the vector L (Note: R uses the 1-based
+index).</p>
 </div>
 <div id="q2." class="section level3">
 <h3>Q2.</h3>
-<p>What is the data type of the 4th (2) and 5th element (‘2’) in the
-vector L respectively?</p>
+<p>What is the <strong>data type</strong> of the 4th (<code>2</code>)
+and 5th element (<code>&#39;2&#39;</code>) in the vector L respectively?</p>
 </div>
 <div id="q3." class="section level3">
 <h3>Q3.</h3>
-<p>Find the total number of elements in the vector L.</p>
+<p>Find the <strong>total number of elements</strong> in the vector
+L.</p>
 </div>
 <div id="q4." class="section level3">
 <h3>Q4.</h3>
-<p>Find the length (number of characters) of the last element in the
-vector L.</p>
+<p>Find the <strong>length (number of characters)</strong> of the
+<strong>last element</strong> in the vector L.</p>
 </div>
 <div id="q5." class="section level3">
 <h3>Q5.</h3>
-<p>Use vector slicing to access the 4 boolean values in the vector
-L.</p>
+<p>Use vector slicing to access the <strong>4 boolean values</strong> in
+the vector L.</p>
 </div>
 <div id="q6." class="section level3">
 <h3>Q6.</h3>
-<p>Print the vector in reverse order without changing it.</p>
+<p>Print the vector in <strong>reverse order</strong> without changing
+it.</p>
 </div>
 <div id="q7." class="section level3">
 <h3>Q7.</h3>
-<p>Write code to calculate the sum of the first three numbers in the
-vector L.</p>
+<p>Write code to calculate the <strong>sum of the first three
+numbers</strong> in the vector L.</p>
 </div>
 <div id="q8." class="section level3">
 <h3>Q8.</h3>
-<p>Write code to count the frequency of 3 in the vector L.</p>
+<p>Write code to count <strong>the frequency of 3</strong> in the vector
+L.</p>
 </div>
 <div id="q9." class="section level3">
 <h3>Q9.</h3>
-<p>Add the following 2 elements to the vector L: “illini”, “spring”.</p>
+<p>Add the following 2 elements to the vector L:
+<code>“illini”, “spring”</code>.</p>
 </div>
 <div id="q10." class="section level3">
 <h3>Q10.</h3>
-<p>Change the last element in the vector L to “this is a short
-string”.</p>
+<p>Change the <strong>last element</strong> in the vector L to
+<code>“this is a short string”</code>.</p>
 </div>
 </div>
 <div id="section-2-data-frame" class="section level2">
@@ -412,60 +417,75 @@ string”.</p>
 access the CSV file in the following link: <a href="https://drmaggiezhang.com/files/ElonMuskTweets.csv" class="uri">https://drmaggiezhang.com/files/ElonMuskTweets.csv</a></p>
 <p>This file contains all tweets posted by Elon Musk in the past 2 years
 from Jan/01/2021 to Jan/01/2023. I did the data collection using Twitter
-API. By the end of 1st module, you will also be able to do it as
-well.</p>
+API. By the end of 1st module, you will also be able to do it in just a
+few minutes.</p>
 <div id="q11." class="section level3">
 <h3>Q11.</h3>
-<p>Read in the CSV file into a data frame format. How many rows and
-columns of this data frame?</p>
+<p>Read in the CSV file into a <code>data frame</code> format. How many
+<strong>rows and columns</strong> of this data frame?</p>
 </div>
 <div id="q12." class="section level3">
 <h3>Q12.</h3>
-<p>Find the most liked tweet with the maximum like_count. What is the id
-of that tweet?</p>
+<p>Find the most liked tweet with the <strong>maximum</strong>
+<code>like_count</code>. What is the <strong>id</strong> of that
+tweet?</p>
 </div>
 <div id="q13." class="section level3">
 <h3>Q13.</h3>
-<p>What is the average retweet number of Elon Musk’s tweets?</p>
+<p>What is the <strong>average</strong> <code>retweet_count</code> of
+Elon Musk’s tweets?</p>
 </div>
 <div id="q14." class="section level3">
 <h3>Q14.</h3>
-<p>What is the total length of tweet text?</p>
+<p>What is the total <strong>length</strong> of tweet
+<code>text</code>?</p>
 </div>
 <div id="q15." class="section level3">
 <h3>Q15.</h3>
-<p>Write a function that takes in 3 parameters as input: retweet_count,
-reply_count, and like_count. Calculate their average as the output. Name
-the function as CalculateEngagement</p>
+<p>Write a function that takes in 3 parameters as input:
+<code>retweet_count</code>, <code>reply_count</code>, and
+<code>like_count</code>. Calculate their <strong>average</strong> as the
+output. Name the function as
+<strong><code>CalculateEngagement</code></strong></p>
 </div>
 <div id="q16." class="section level3">
 <h3>Q16.</h3>
-<p>Using the CalculateEngagement functions you just wrote, create a new
-column in the data frame called engagement_index.</p>
+<p>Using the <strong><code>CalculateEngagement</code></strong> functions
+you just wrote, create a new column in the data frame called
+<strong>engagement_index</strong>.</p>
 </div>
 <div id="q17." class="section level3">
 <h3>Q17.</h3>
-<p>Write another function that takes in 2 parameters: retweet_count, and
-reply_count. Calculate the reply-to-retweet ratio as the output
-(reply_count/retweet_count). Name the function as CalculateRatio.</p>
+<p>Write another function that takes in 2 parameters:
+<code>retweet_count</code>, and <code>reply_count</code>. Calculate the
+reply-to-retweet ratio as the output
+(<code>reply_count/retweet_count</code>). Name the function as
+<strong><code>CalculateRatio</code></strong>.</p>
 </div>
 <div id="q18." class="section level3">
 <h3>Q18.</h3>
-<p>Similarly, using the CalculateRatio functions you just wrote, create
-a new column in the data frame called ratio. Note: there are some tweets
-whose retweet_count is 0. Therefore you need to write a conditional
-statement. If the retweet_count is 0, set the ratio to 0.</p>
+<p>Similarly, using the <strong>CalculateRatio</strong> functions you
+just wrote, create a new column in the data frame called
+<code>ratio</code>.</p>
+<p><strong>Note</strong>: there are some tweets whose
+<code>retweet_count</code> is 0. Therefore you need to write a
+<strong>conditional statement</strong>. If the
+<code>retweet_count</code> is 0, set the <code>ratio</code> to 0.</p>
 </div>
 <div id="q19." class="section level3">
 <h3>Q19.</h3>
-<p>Get the full vector of all hashtags that appeared in Elon Musk’s
-tweets. (Note: you might need to combine the for loop and conditional
-statement, as well as the vector combination. The logic goes as follows:
-create an empty vector (named all_hashtags) to store all hashtags. For
-each item in the ElonMuskTweets[‘hashtags’], if it is empty, it means
-there is a vector of hashtags in that tweet. Append this vector to the
-all_hashtags vector you created. Use pandas.isna() to see if an element
-is empty).</p>
+<p>Get the full vector of <strong>all hashtags</strong> that appeared in
+Elon Musk’s tweets.</p>
+<p>Note: you might need to combine the <strong>for loop</strong> and
+<strong>conditional statement</strong>, as well as the <strong>vector
+combination</strong>.</p>
+<p>The logic goes as follows: 1. create an empty vector (named
+<code>all_hashtags</code>) to store all hashtags. 2. For each item in
+the <code>ElonMuskTweets[‘hashtags’]</code>, if it is not empty, it
+means there is a vector of hashtags in that tweet. 3.Append this vector
+to the <code>all_hashtags</code> vector you created. 4.Use
+<code>nchar() == 0</code> to see if an element is empty. Similarly use
+<code>nchar() != 0</code> to detect non empty element.</p>
 </div>
 <div id="q20." class="section level3">
 <h3>Q20.</h3>
