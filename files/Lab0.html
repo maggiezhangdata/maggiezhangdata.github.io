@@ -9,11 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
-<meta name="author" content="Maggie Zhang" />
 
 <meta name="date" content="2023-01-24" />
 
-<title>Lab 0</title>
+<title>Lab 0 questions</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -350,8 +349,7 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Lab 0</h1>
-<h4 class="author">Maggie Zhang</h4>
+<h1 class="title toc-ignore">Lab 0 questions</h1>
 <h4 class="date">2023-01-24</h4>
 
 </div>
@@ -359,54 +357,52 @@ display: none;
 
 <div id="section-1-vector-manipulation" class="section level2">
 <h2>Section 1: Vector manipulation</h2>
-<p>For this section, you will be working on the following list</p>
-<pre class="r"><code>L = list(3, 1, 1.3, 2, &#39;2&#39;, list(2,8), TRUE, FALSE, FALSE, TRUE, 2, 3, 3, 9,2, &quot;banana&quot;, &quot;tree&quot;, &#39;bee&#39;, &#39;this is a long string&#39;)</code></pre>
+<p>For this section, you will be working on the following vector</p>
+<pre class="r"><code>L = c(3, 1, 1.3, 2, &#39;2&#39;, c(2,8), TRUE, FALSE, FALSE, TRUE, 2, 3, 3, 9,2, &quot;banana&quot;, &quot;tree&quot;, &#39;bee&#39;, &#39;this is a long string&#39;)</code></pre>
 <div id="q1." class="section level3">
 <h3>Q1.</h3>
-<p>Write the code to show the data type of the 6th element ([2,8]) in
-the list L (Note: Python uses the 0-based index, meaning the index
-starts from 0 instead of 1).</p>
+<p>Write the code to show the data type of the 6th element in the vector
+L (Note: R uses the 1-based index).</p>
 </div>
 <div id="q2." class="section level3">
 <h3>Q2.</h3>
 <p>What is the data type of the 4th (2) and 5th element (‘2’) in the
-list L respectively? (Note: the difference between ‘2’ and 2)</p>
+vector L respectively?</p>
 </div>
 <div id="q3." class="section level3">
 <h3>Q3.</h3>
-<p>Find the length (number of characters) of the last element in the
-list L.</p>
+<p>Find the total number of elements in the vector L.</p>
 </div>
 <div id="q4." class="section level3">
 <h3>Q4.</h3>
-<p>Find the total number of elements in the list L.</p>
+<p>Find the length (number of characters) of the last element in the
+vector L.</p>
 </div>
 <div id="q5." class="section level3">
 <h3>Q5.</h3>
-<p>Use list slicing to access the 4 boolean values in the list L.</p>
+<p>Use vector slicing to access the 4 boolean values in the vector
+L.</p>
 </div>
 <div id="q6." class="section level3">
 <h3>Q6.</h3>
-<p>Print the list in reverse order without changing it.</p>
+<p>Print the vector in reverse order without changing it.</p>
 </div>
 <div id="q7." class="section level3">
 <h3>Q7.</h3>
 <p>Write code to calculate the sum of the first three numbers in the
-list L.</p>
+vector L.</p>
 </div>
 <div id="q8." class="section level3">
 <h3>Q8.</h3>
-<p>Write code to count the frequency of 3 in the list L.</p>
+<p>Write code to count the frequency of 3 in the vector L.</p>
 </div>
 <div id="q9." class="section level3">
 <h3>Q9.</h3>
-<p>Add the following 2 elements to the list L: “illini”, “spring” (Note:
-you can use the append method or the plus operator. Do not add the 2
-elements as a new list).</p>
+<p>Add the following 2 elements to the vector L: “illini”, “spring”.</p>
 </div>
 <div id="q10." class="section level3">
 <h3>Q10.</h3>
-<p>Change the last element in the list L to “this is a short
+<p>Change the last element in the vector L to “this is a short
 string”.</p>
 </div>
 </div>
@@ -462,19 +458,19 @@ statement. If the retweet_count is 0, set the ratio to 0.</p>
 </div>
 <div id="q19." class="section level3">
 <h3>Q19.</h3>
-<p>Get the full list of all hashtags that appeared in Elon Musk’s
+<p>Get the full vector of all hashtags that appeared in Elon Musk’s
 tweets. (Note: you might need to combine the for loop and conditional
-statement, as well as the list combination. The logic goes as follows:
-create an empty list (named all_hashtags) to store all hashtags. For
+statement, as well as the vector combination. The logic goes as follows:
+create an empty vector (named all_hashtags) to store all hashtags. For
 each item in the ElonMuskTweets[‘hashtags’], if it is empty, it means
-there is a list of hashtags in that tweet. Append this list to the
-all_hashtags list you created. Use pandas.isna() to see if an element is
-empty).</p>
+there is a vector of hashtags in that tweet. Append this vector to the
+all_hashtags vector you created. Use pandas.isna() to see if an element
+is empty).</p>
 </div>
 <div id="q20." class="section level3">
 <h3>Q20.</h3>
 <p>Save the current data frame (with 2 additional columns) as a new CSV
-file. Upload it here.</p>
+file. Upload it to Canvas.</p>
 </div>
 </div>
 
